@@ -1,40 +1,317 @@
-<div class="transport-item">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorons le monde</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f8fc;
+            color: #222;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #e8f4ff, #fff5e8);
+            padding: 70px 25px 60px;
+            text-align: center;
+        }
+        .hero .emoji {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .hero .subtitle-fr {
+            font-size: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        .hero .subtitle-vn {
+            font-size: 16px;
+            color: #777;
+            margin-top: 4px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 45px 22px;
+        }
+        .card {
+            background: white;
+            border-radius: 22px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+        .card h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        .card h2 span {
+            font-size: 16px;
+            font-weight: normal;
+            color: #888;
+            display: block;
+            margin-top: 2px;
+        }
+        .card p {
+            margin-bottom: 10px;
+            color: #444;
+        }
+        .french {
+            font-size: 17px;
+        }
+        .vietnamese {
+            color: #888 !important;
+            font-size: 15px;
+        }
+        .how {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 25px;
+        }
+        .step {
+            background: #f7f8fc;
+            border-radius: 18px;
+            padding: 22px 15px;
+            text-align: center;
+        }
+        .step .number {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+        .step h3 {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
+        .step p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .transport-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .transport-title h2 {
+            margin-bottom: 3px;
+        }
+        .transport-list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            padding: 20px 0;
+        }
+        .transport-item {
+            background: #f7f8fc;
+            min-height: 95px;
+            border-radius: 18px;
+            display: flex;
+          flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .transport-item .icon {
+            font-size: 35px;
+            margin-bottom: 5px;
+        }
+        .transport-item .name {
+            font-size: 13px;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px 40px;
+            color: #999;
+            font-size: 13px;
+        }
+        @media (max-width: 650px) {
+            .hero {
+                padding: 50px 20px 45px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .how {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                padding: 24px;
+            }
+            .transport-list {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+            .transport-item {
+                min-height: 90px;
+            }
+            .transport-item .icon {
+                font-size: 31px;
+            }
+            .transport-item .name {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PHẦN ĐẦU TRANG -->
+    <section class="hero">
+        <div class="emoji">🌍</div>
+        <h1>EXPLORONS LE MONDE</h1>
+        <p class="subtitle-fr">
+            À travers les langues
+        </p>
+        <p class="subtitle-vn">
+            Khám phá thế giới qua ngôn ngữ
+        </p>
+    </section>
+    <main class="container">
+        <!-- GIỚI THIỆU -->
+        <section class="card">
+            <h2>
+                Bienvenue !
+                <span>Chào mừng!</span>
+            </h2>
+            <p class="french">
+                Bienvenue dans notre projet « Explorons le monde à travers les langues » !
+            </p>
+            <p class="french">
+                À travers ce projet, nous découvrons différents moyens de transport
+                tout en apprenant leur nom et quelques informations en français.
+            </p>
+            <p class="vietnamese">
+                Chào mừng đến với dự án “Khám phá thế giới qua ngôn ngữ”!
+            </p>
+            <p class="vietnamese">
+                Thông qua dự án này, chúng ta cùng khám phá các phương tiện giao thông
+                khác nhau, đồng thời tìm hiểu tên gọi và một số thông tin về chúng bằng tiếng Pháp.
+            </p>
+        </section>
+        <!-- GIỚI THIỆU DỰ ÁN -->
+        <section class="card">
+            <h2>
+                🚀 Notre projet
+                <span>Dự án của chúng tôi</span>
+            </h2>
+            <p class="french">
+                Les moyens de transport nous permettent de voyager,
+                de découvrir de nouveaux endroits et de rapprocher les personnes.
+            </p>
+            <p class="french">
+              Nous avons choisi ce thème pour apprendre le français
+                d'une manière plus interactive, amusante et proche de la vie quotidienne.
+            </p>
+            <p class="vietnamese">
+                Phương tiện giao thông giúp chúng ta di chuyển, khám phá những địa điểm mới
+                và kết nối mọi người với nhau.
+            </p>
+            <p class="vietnamese">
+                Chúng tôi lựa chọn chủ đề này để học tiếng Pháp theo một cách
+                tương tác, thú vị và gần gũi hơn với cuộc sống hằng ngày.
+            </p>
+        </section>
+        <!-- HƯỚNG DẪN NFC -->
+        <section class="card">
+            <h2>
+                📱 Comment ça marche ?
+                <span>Cách thức hoạt động</span>
+            </h2>
+            <p class="french">
+                Scannez un tag NFC pour découvrir un moyen de transport.
+            </p>
+            <p class="vietnamese">
+                Hãy quét một thẻ NFC để khám phá một phương tiện giao thông.
+            </p>
+            <div class="how">
+                <div class="step">
+                    <div class="number">📱</div>
+                    <h3>1. Scannez</h3>
+                    <p>
+                        Quét thẻ NFC
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="number">🔎</div>
+                    <h3>2. Découvrez</h3>
+                    <p>
+                        Khám phá phương tiện
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="number">🔊</div>
+                    <h3>3. Écoutez</h3>
+                    <p>
+                        Nghe và tìm hiểu
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- CÁC PHƯƠNG TIỆN -->
+        <section class="card">
+            <div class="transport-title">
+                <h2>
+                    🚗 Découvrez les moyens de transport
+                </h2>
+                <p class="vietnamese">
+                    Khám phá các phương tiện giao thông
+                </p>
+            </div>
+            <div class="transport-list">
+                <!-- DƯỚI NƯỚC -->
+                <div class="transport-item">
+                    <div class="icon">🤿</div>
+                    <div class="name">Sous-marin</div>
+                </div>
+                <div class="transport-item">
+                    <div class="icon">🛶</div>
+                    <div class="name">Bateau</div>
+                </div>
+                <div class="transport-item">
+                    <div class="icon">⛴️</div>
+                    <div class="name">Ferry</div>
+                </div>
+                <div class="transport-item">
                     <div class="icon">🛳️</div>
                     <div class="name">Paquebot</div>
                 </div>
-
                 <div class="transport-item">
                     <div class="icon">🛥️</div>
                     <div class="name">Yacht</div>
                 </div>
-
                 <div class="transport-item">
                     <div class="icon">⛵</div>
                     <div class="name">Voilier</div>
                 </div>
-
-
                 <!-- TRÊN MẶT ĐẤT -->
-
                 <div class="transport-item">
                     <div class="icon">🚗</div>
                     <div class="name">Voiture</div>
                 </div>
-
                 <div class="transport-item">
                     <div class="icon">🚌</div>
                     <div class="name">Bus</div>
                 </div>
-
                 <div class="transport-item">
                     <div class="icon">🚚</div>
                     <div class="name">Camion</div>
                 </div>
-
                 <div class="transport-item">
                     <div class="icon">🚆</div>
                     <div class="name">Train</div>
                 </div>
-
                 <div class="transport-item">
                     <div class="icon">🚊</div>
+                    <div class="name">Tramway</div>
+                </div>
+                <div class="transport-item">

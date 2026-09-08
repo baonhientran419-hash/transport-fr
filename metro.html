@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Un métro</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff8e7;
+            color: #222;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        /* ICON */
+        .emoji {
+            text-align: center;
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+
+        /* KHUNG TỪ MỚI */
+        .word-card {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .word {
+            font-size: 38px;
+            margin: 5px 0;
+        }
+
+        .pronunciation {
+            font-size: 19px;
+            color: #777;
+            margin: 8px 0 15px;
+        }
+
+        /* NÚT ÂM THANH */
+        .sound-button {
+            border: none;
+            background: #f1d58a;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            font-size: 23px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .sound-button:hover {
+            transform: scale(1.08);
+        }
+
+        /* ĐỊNH NGHĨA */
+        .french {
+            font-size: 19px;
+            line-height: 1.6;
+            margin: 25px auto 15px;
+            max-width: 650px;
+        }
+
+        /* NÚT DỊCH */
+        .translate-button {
+            border: none;
+            background: #222;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* TIẾNG VIỆT */
+        .vietnamese {
+            display: none;
+            margin: 18px auto 0;
+            padding: 18px;
+            max-width: 650px;
+            background: #fff8e7;
+            border-radius: 15px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* VIDEO */
+        .video-card {
+            background: white;
+            border-radius: 24px;
+            padding: 25px;
+            margin-top: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .video-title {
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .video-box {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #e8dfc7;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ICON -->
+    <div class="emoji">🚇</div>
+
+    <!-- TỪ MỚI + ĐỊNH NGHĨA -->
+    <div class="word-card">
+
+        <h1 class="word">Un métro</h1>
+
+        <div class="pronunciation">
+/me.tʁo/ 
+
+            <button
+                class="sound-button"
+                onclick="speakFrench('Un métro')">
+                🔊
+            </button>
+        </div>
+
+        <!-- TIẾNG PHÁP -->
+        <p class="french">
+            Chemin de fer métropolitain, généralement souterrain, destiné au transport rapide des voyageurs dans une grande agglomération.
+        </p>
+
+        <!-- NÚT DỊCH -->
+        <button
+            class="translate-button"
+            onclick="showTranslation()">
+            🇻🇳 Voir la traduction
+        </button>
+
+        <!-- TIẾNG VIỆT -->
+        <div class="vietnamese" id="translation">
+            <strong>Tàu điện ngầm:</strong><br>
+           Hệ thống đường sắt đô thị, thường chạy ngầm dưới lòng đất, dùng để vận chuyển nhanh hành khách trong các đô thị lớn 
+
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO -->
+    <div class="video-card">
+
+        <div class="video-title">
+            🎬 Regardez
+        </div>
+
+        <div class="video-box">
+
+            <!-- THAY VIDEO CỦA M VÀO ĐÂY -->
+            <video controls>
+                <source src="taudienngam.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /* TEXT-TO-SPEECH TIẾNG PHÁP */
+
+    function speakFrench(text) {
+
+        const speech = new SpeechSynthesisUtterance(text);
+
+        speech.lang = "fr-FR";
+        speech.rate = 0.85;
+        speech.pitch = 1;
+
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(speech);
+    }
+
+
+    /* HIỆN / ẨN BẢN DỊCH */
+
+    function showTranslation() {
+
+        const translation =
+            document.getElementById("translation");
+
+        if (translation.style.display === "block") {
+
+            translation.style.display = "none";
+
+        } else {
+
+            translation.style.display = "block";
+
+        }
+    }
+
+</script>
+
+</body>
+</html>

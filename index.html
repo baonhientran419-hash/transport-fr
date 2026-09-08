@@ -156,6 +156,31 @@
             color: #555;
         }
 
+        /* THÊM ĐOẠN NÀY ĐỂ SOUS-MARIN CĂN GIỮA */
+        .transport {
+            background: #f7f8fc;
+            min-height: 100px;
+            border-radius: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .transport .icon {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        .transport p {
+            font-size: 13px;
+            color: #555;
+            margin: 0;
+        }
+
         footer {
             text-align: center;
             padding: 30px 20px 40px;
@@ -195,6 +220,18 @@
             }
 
             .transport-item .name {
+                font-size: 12px;
+            }
+
+            .transport {
+                min-height: 90px;
+            }
+
+            .transport .icon {
+                font-size: 31px;
+            }
+
+            .transport p {
                 font-size: 12px;
             }
         }
@@ -347,10 +384,10 @@
             <div class="transport-list">
 
                 <!-- 1. TÀU NGẦM -->
-              <a href="sous-marin.html" class="transport">
-    <div class="icon">🤿</div>
-    <p>Sous-marin</p>
-</a>
+                <a href="sous-marin.html" class="transport">
+                    <div class="icon">🤿</div>
+                    <p>Sous-marin</p>
+                </a>
 
                 <!-- 2. THUYỀN -->
                 <div class="transport-item">
@@ -493,3 +530,4 @@
 
 </body>
 </html>
+
